@@ -2,7 +2,6 @@ from typing import Dict, List, Union
 
 from pandas import DataFrame
 
-
 def combine_features(df: Union[List[Dict], DataFrame]) -> Union[List[Dict], DataFrame]:
     if isinstance(df, DataFrame):
         df['PU_DO'] = df['PULocationID'].astype(str) + '_' + df['DOLocationID'].astype(str)
